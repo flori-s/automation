@@ -1,0 +1,48 @@
+en:
+  automation:
+    nav:
+      label: Automations
+      toggle: Menu
+      rules: Rules
+      jobs: Jobs
+    footer:
+      credit: flori-s
+    jobs:
+      title: Jobs
+      empty: No jobs
+      filters_label: Status
+      pages_label: Pages
+      previous: Previous
+      next: Next
+      blank: "—"
+      columns:
+        rule: Rule
+        target: Target
+        run_at: Scheduled
+        executed_at: Executed
+        attempts: Attempts
+      statuses:
+        pending: Pending
+        running: Running
+        completed: Completed
+        failed: Failed
+        cancelled: Cancelled
+    rules:
+      title: Rules
+      import: Import
+      empty: No rules
+      export: Export
+      yes: "yes"
+      no: "no"
+      imported: Rule imported
+      no_file: No file chosen
+      columns:
+        name: Name
+        key: Key
+        model: Model
+        action: Action
+        enabled: Enabled
+        export: Export
+    errors:
+      missing_type: type is missing
+      unknown_trigger: "Unknown automation trigger type: %{type}"

@@ -1,0 +1,52 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active" aria-current="page"><%= t("automation.rules.title") %></li>
+</ol>
+
+<div class="card">
+  <div class="card-header"><%= t("automation.rules.title") %></div>
+  <div class="card-body">
+    <%= form_tag upload_rules_path, multipart: true, class: "form-inline mb-3" do %>
+      <div class="form-group mr-2 mb-2">
+        <%= file_field_tag :import_file, accept: "application/json,.json", class: "form-control-file" %>
+      </div>
+      <%= submit_tag t("automation.rules.import"), class: "btn btn-success mb-2" %>
+    <% end %>
+
+    <% if @automation_rules.empty? %>
+      <p class="text-muted mb-0"><%= t("automation.rules.empty") %></p>
+    <% else %>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover mb-0">
+          <thead>
+            <tr>
+              <th><%= t("automation.rules.columns.name") %></th>
+              <th><%= t("automation.rules.columns.key") %></th>
+              <th><%= t("automation.rules.columns.model") %></th>
+              <th><%= t("automation.rules.columns.action") %></th>
+              <th><%= t("automation.rules.columns.enabled") %></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @automation_rules.each do |rule| %>
+              <tr>
+                <td><%= rule.name %></td>
+                <td><%= rule.key %></td>
+                <td><%= rule.target_type %></td>
+                <td><%= rule.action.to_h["type"] %></td>
+                <td>
+                  <span class="badge <%= rule.enabled? ? "badge-success" : "badge-secondary" %>">
+                    <%= rule.enabled? ? t("automation.rules.yes") : t("automation.rules.no") %>
+                  </span>
+                </td>
+                <td class="text-right">
+                  <%= link_to t("automation.rules.export"), export_rule_path(rule), class: "btn btn-sm btn-outline-secondary" %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  </div>
+</div>

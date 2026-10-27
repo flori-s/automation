@@ -1,0 +1,48 @@
+nl:
+  automation:
+    nav:
+      label: Automatiseringen
+      toggle: Menu
+      rules: Regels
+      jobs: Jobs
+    footer:
+      credit: flori-s
+    jobs:
+      title: Jobs
+      empty: Geen jobs
+      filters_label: Status
+      pages_label: Pagina's
+      previous: Vorige
+      next: Volgende
+      blank: "—"
+      columns:
+        rule: Regel
+        target: Doel
+        run_at: Gepland
+        executed_at: Uitgevoerd
+        attempts: Pogingen
+      statuses:
+        pending: In afwachting
+        running: Bezig
+        completed: Voltooid
+        failed: Mislukt
+        cancelled: Geannuleerd
+    rules:
+      title: Regels
+      import: Importeren
+      empty: Geen regels
+      export: Export
+      yes: ja
+      no: nee
+      imported: Regel geïmporteerd
+      no_file: Geen bestand gekozen
+      columns:
+        name: Naam
+        key: Sleutel
+        model: Model
+        action: Actie
+        enabled: Actief
+        export: Export
+    errors:
+      missing_type: type ontbreekt
+      unknown_trigger: "Onbekend automation trigger type: %{type}"

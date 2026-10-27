@@ -1,0 +1,56 @@
+@import "bootstrap";
+
+body {
+  background-color: #e7ebee;
+  color: #515151;
+}
+
+.automation-navbar {
+  background-color: #5c0700;
+}
+
+.automation-navbar .navbar-brand,
+.automation-navbar .nav-link {
+  color: #ecf0f1;
+}
+
+.automation-navbar .navbar-brand:hover,
+.automation-navbar .navbar-brand:focus,
+.automation-navbar .nav-link:hover,
+.automation-navbar .nav-link:focus,
+.automation-navbar .nav-item.active .nav-link {
+  color: #fff;
+}
+
+.automation-navbar .nav-item.active .nav-link {
+  background-color: #901100;
+}
+
+.breadcrumb {
+  background-color: #fcf8e3;
+  border-radius: 0;
+}
+
+.card {
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  background: #fff;
+  border-bottom: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn,
+.form-control,
+.page-link,
+.badge {
+  border-radius: 0;
+}
+
+.automation-filters .btn {
+  margin: 0 0.5rem 0.5rem 0;
+}
